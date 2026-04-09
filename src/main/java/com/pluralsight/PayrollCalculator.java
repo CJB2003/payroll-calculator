@@ -29,7 +29,14 @@ public class PayrollCalculator {
         double payRatePerHour = payRate * hoursWorked;
 
         //Output gross pay
-        System.out.println("Pay rate: $" + payRatePerHour);
+        System.out.println("Gross pay: $" + payRatePerHour);
+
+        if (hoursWorked > 40) {
+            payRate *= 1.5;
+            payRatePerHour = payRate * hoursWorked;
+
+            System.out.println("Overtime gross pay is: $" + payRatePerHour);
+        }
 
     }
 }
