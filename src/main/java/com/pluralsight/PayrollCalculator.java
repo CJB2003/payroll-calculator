@@ -33,10 +33,10 @@ public class PayrollCalculator {
         //if employee works over 40 hours, their pay increases by 1.5x
         //if not, they get their normal pay
         if (hoursWorked > 40) {
-            payRate *= 1.5;
-            grossPay = payRate * hoursWorked;
+            double overtimeHours = hoursWorked - 40;
+            double overtimeGrossPay = (payRate * 40) + (overtimeHours) + (payRate * 1.5);
 
-            System.out.println("Overtime gross pay is: $" + String.format("%.2f", grossPay));
+            System.out.println("Overtime gross pay is: $" + String.format("%.2f", overtimeGrossPay));
         }
         else {
             System.out.println("Gross pay: $" + String.format("%.2f", grossPay));
