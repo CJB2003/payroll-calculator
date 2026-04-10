@@ -25,17 +25,20 @@ public class PayrollCalculator {
         System.out.println("Hours worked: " + hoursWorked);
 
         //Pay rate is pay rate multiplied by hours worked
+        System.out.println("How much do you get paid per hour?");
         double payRate = myScanner.nextDouble();
-        double payRatePerHour = payRate * hoursWorked;
+        double grossPay = payRate * hoursWorked;
 
         //Output gross pay
-        System.out.println("Gross pay: $" + payRatePerHour);
 
         if (hoursWorked > 40) {
             payRate *= 1.5;
-            payRatePerHour = payRate * hoursWorked;
+            grossPay = payRate * hoursWorked;
 
-            System.out.println("Overtime gross pay is: $" + payRatePerHour);
+            System.out.println("Overtime gross pay is: $" + grossPay);
+        }
+        else {
+            System.out.println("Gross pay: $" + grossPay + "\n");
         }
 
     }
