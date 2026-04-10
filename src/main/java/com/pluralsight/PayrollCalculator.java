@@ -9,36 +9,37 @@ public class PayrollCalculator {
         Scanner myScanner = new Scanner(System.in);
 
         //Ask for name
-        System.out.println("Enter your name: ");
+        System.out.println("Enter your name: \n");
 
         String userName = myScanner.nextLine();
 
         //Output employee name
-        System.out.println("Employee name: " + userName);
+        System.out.println("Employee name: " + userName + "\n");
 
         //Ask for hours worked
-        System.out.println("How many hours have you worked?");
+        System.out.println("How many hours have you worked? \n");
 
         double hoursWorked = myScanner.nextDouble();
 
         //Output hours worked
-        System.out.println("Hours worked: " + hoursWorked);
+        System.out.println("Hours worked: " + hoursWorked + "\n");
 
         //Pay rate is pay rate multiplied by hours worked
-        System.out.println("How much do you get paid per hour?");
+        System.out.println("How much do you get paid per hour? \n");
         double payRate = myScanner.nextDouble();
         double grossPay = payRate * hoursWorked;
 
         //Output gross pay
-
+        //if employee works over 40 hours, their pay increases by 1.5x
+        //if not, they get their normal pay
         if (hoursWorked > 40) {
             payRate *= 1.5;
             grossPay = payRate * hoursWorked;
 
-            System.out.println("Overtime gross pay is: $" + grossPay);
+            System.out.println("Overtime gross pay is: $" + String.format("%.2f", grossPay));
         }
         else {
-            System.out.println("Gross pay: $" + grossPay + "\n");
+            System.out.println("Gross pay: $" + String.format("%.2f", grossPay));
         }
 
     }
