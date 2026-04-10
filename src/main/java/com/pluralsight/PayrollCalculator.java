@@ -9,23 +9,23 @@ public class PayrollCalculator {
         Scanner myScanner = new Scanner(System.in);
 
         //Ask for name
-        System.out.println("Enter your name: \n");
+        System.out.println("Enter your name: ");
 
         String userName = myScanner.nextLine();
 
         //Output employee name
-        System.out.println("Employee name: " + userName + "\n");
+        System.out.println("Employee name: " + userName);
 
         //Ask for hours worked
-        System.out.println("How many hours have you worked? \n");
+        System.out.println("How many hours have you worked?");
 
         double hoursWorked = myScanner.nextDouble();
 
         //Output hours worked
-        System.out.println("Hours worked: " + hoursWorked + "\n");
+        System.out.println("Hours worked: " + hoursWorked);
 
         //Pay rate is pay rate multiplied by hours worked
-        System.out.println("How much do you get paid per hour? \n");
+        System.out.println("How much do you get paid per hour?");
         double payRate = myScanner.nextDouble();
         double grossPay = payRate * hoursWorked;
 
