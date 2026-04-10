@@ -32,6 +32,7 @@ public class PayrollCalculator {
         //Output gross pay
         //if employee works over 40 hours, their pay increases by 1.5x
         //if not, they get their normal pay
+        //Also formatted to only print out 2 decimal places
         if (hoursWorked > 40) {
             double overtimeHours = hoursWorked - 40;
             double overtimeGrossPay = (payRate * 40) + (overtimeHours * payRate * 1.5);
